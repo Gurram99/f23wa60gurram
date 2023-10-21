@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', mydataRouter); // Step 2: Connect mydataRouter to the /mydata endpoint
+app.use('/mydata', mydataRouter); // Step 2: Connect mydataRouter to the /mydata endpoint
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
