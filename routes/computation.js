@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
   num2 = Math.round(rand2);
   num3 = Math.round(rand1);
 
-  res.render(`The Random numbers are ${rand1} and ${rand2}
+  res.send(`The Random numbers are ${rand1} and ${rand2}
     <br> <br> round applied to ${rand1} is ${num1} 
     <br> <br> round applied to ${rand2} is ${num2}
     <br> <br> round applied to ${rand1} is ${num3}`);
