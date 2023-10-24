@@ -7,7 +7,7 @@ var logger = require('morgan');
 var mydataRouter = require('./routes/mydata'); // Step 1: Create the mydataRouter
 var usersRouter = require('./routes/users');
 var bonusRouter = require('./routes/computation');
-
+var indexRouter = require('./routes/index');
 
 var app = express();
 
@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/mydata', mydataRouter); // Step 2: Connect mydataRouter to the /mydata endpoint
 app.use('/users', usersRouter);
 app.use('/computation', bonusRouter);
+app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
