@@ -8,13 +8,13 @@ var num2 = 0;
 var num3 = 0;
 
 router.get('/', function (req, res, next) {
-  num1 = Math.round(rand1);
-  num2 = Math.round(rand2);
+  num1 = Math.fround(rand1);
+  num2 = Math.random(rand2);
   num3 = Math.round(rand1);
 
   res.send(`The Random numbers are ${rand1} and ${rand2}
-    <br> <br> round applied to ${rand1} is ${num1} 
-    <br> <br> round applied to ${rand2} is ${num2}
+    <br> <br> fround applied to ${rand1} is ${num1} 
+    <br> <br> random applied to ${rand2} is ${num2}
     <br> <br> round applied to ${rand1} is ${num3}`);
 });
 
